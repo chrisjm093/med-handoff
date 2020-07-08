@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "passport_demo",
-    "host": "127.0.0.1",
+    "username": "obwhekmpqc2wywi1",
+    "password": "tj0l6le2p7azu0ce",
+    "database": "nqdxrsjio1xqczjo",
+    "host": "d6vscs19jtah8iwb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "obwhekmpqc2wywi1",
+    "password": "tj0l6le2p7azu0ce",
+    "database": "nqdxrsjio1xqczjo",
+    "host": "d6vscs19jtah8iwb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
