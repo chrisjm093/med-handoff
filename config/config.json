@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "edacan",
+=======
+    "password": "myroot7",
+>>>>>>> cbdf278000e53a4c28eadeecda2f4cbdf2efe735
     "database": "medhandoff_db",
     "host": "localhost",
     "dialect": "mysql"
