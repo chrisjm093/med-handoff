@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Unit.associate = function(models) {
-    /* Unit.hasMany(models.Paitents); */
+    Unit.hasMany(models.Paitents);
     Unit.hasMany(models.Practitioner);
   };
 
