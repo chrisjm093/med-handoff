@@ -31,7 +31,7 @@ require("./routes/api-routes.js")(app);
 // Set Handlebars as the default templating engine.
 const hbs = exphbs.create({ defaultLayout: "main" });
 exphbsSections(hbs);
-app.engine("handlebars", hbs.engine );
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // Syncing our database and logging a message to the user upon success
