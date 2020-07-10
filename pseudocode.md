@@ -5,7 +5,7 @@ Patient Table
 Patient name: Unit (ICU, Pediatric, Floor):: age:: History:: Diagnosis:: Code status: Tests: Therapies:: SOAP :: foreign key
 
 Assignment table
-
 Practitioner id :: patient id :: assignment is created via this connection
 
 customizable units
+
