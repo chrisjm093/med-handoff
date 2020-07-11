@@ -31,7 +31,6 @@ $(document).ready(() => {
       .then(result => {
         console.log(result);
         window.location.reload();
-        
         // If there's an error, log the error
       })
       .catch(err => {
