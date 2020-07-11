@@ -29,4 +29,8 @@ router.get("/practitioner", isAuthenticated, (req, res) => {
   res.render("practitioner");
 });
 
+router.get("/supervisor", (req, res) => {
+  res.render("supervisor");
+});
+
 module.exports = router;
