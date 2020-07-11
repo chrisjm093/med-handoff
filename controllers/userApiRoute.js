@@ -18,10 +18,10 @@ router.post("/api/users", (req, res) => {
     });
 });
 
-router.post("api/users/roles/:role", (req, res) => {
+router.get("/api/users/roles/:role", (req, res) => {
   User.findAll({
     where: {
-      id: req.params.role
+      role: req.params.role
     }
   }).then(dbUsers => {
     res.json(dbUsers);
