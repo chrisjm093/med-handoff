@@ -8,15 +8,20 @@ router.get("/", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
+  res.render("login");
+});
+
+router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
 router.get("/login", (req, res) => {
   // If the user already has an account send them to the members page
-  if (req.user) {
-    res.redirect("/members");
+  if (req.user.role === "Supervisor") {
+    res.redirect("/supervisor");
+  } else if (req.user.role === "Practitioner") {
+    res.redirect("/practitioner");
   }
-  res.render("login");
 });
 
 // Here we've add our isAuthenticated middleware to this route.
