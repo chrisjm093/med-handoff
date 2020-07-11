@@ -12,8 +12,6 @@ const exphbsSections = require("express-handlebars-sections");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
-const forceRolePage = require("./config/middleware/forceRolePage");
-const { FORCE } = require("sequelize/types/lib/index-hints");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
