@@ -8,6 +8,10 @@ router.get("/", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
+  res.render("login");
+});
+
+router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
