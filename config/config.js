@@ -1,7 +1,7 @@
-{
+module.exports ={
   "development": {
     "username": "root",
-    "password": "F!r3T35tH3rtLocker",
+    "password": process.env.DEV_DB_PASS,
     "database": "medhandoff_db",
     "host": "localhost",
     "dialect": "mysql"
@@ -17,4 +17,4 @@
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-}
+};
