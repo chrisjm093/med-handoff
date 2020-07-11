@@ -18,4 +18,14 @@ router.post("/api/users", (req, res) => {
     });
 });
 
+router.post("api/users/roles/:role", (req, res) => {
+  User.findAll({
+    where: {
+      id: req.params.role
+    }
+  }).then(dbUsers => {
+    res.json(dbUsers);
+  });
+});
+
 module.exports = router;
