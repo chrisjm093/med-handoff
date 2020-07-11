@@ -46,8 +46,10 @@ $(document).ready(() => {
       email: email,
       password: password
     })
-      .then(() => {
-        window.location.replace("/members");
+      .then(result => {
+        console.log(result);
+        window.location.reload();
+       
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
