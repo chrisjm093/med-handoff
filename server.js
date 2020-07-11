@@ -12,6 +12,8 @@ const exphbsSections = require("express-handlebars-sections");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
+const forceRolePage = require("./config/middleware/forceRolePage");
+const { FORCE } = require("sequelize/types/lib/index-hints");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
@@ -36,7 +38,7 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(() => {
+db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
