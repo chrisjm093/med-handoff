@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "F!r3T35tH3rtLocker",
+    "password": "password",
     "database": "medhandoff_db",
     "host": "localhost",
     "dialect": "mysql"
