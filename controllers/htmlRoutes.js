@@ -6,7 +6,7 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 router.get("/", forceRolePage, (req, res) => {
   // If the user already has an account send them to the members page
- 
+
   res.render("login");
 });
 
