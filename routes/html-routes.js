@@ -25,7 +25,7 @@ router.get("/members", isAuthenticated, (req, res) => {
   res.render("members");
 });
 
-router.get("/practitioner", (req, res) => {
+router.get("/practitioner", isAuthenticated, (req, res) => {
   res.render("practitioner");
 });
 
