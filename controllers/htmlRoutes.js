@@ -26,7 +26,7 @@ router.get("/members", isAuthenticated, (req, res) => {
 });
 
 router.get("/practitioner", isAuthenticated, (req, res) => {
-  res.render("practitioner");
+  res.sendFile(path.join(__dirname, "./views/practitioner.handlebars"));
 });
 
 router.get("/supervisor", (req, res) => {
