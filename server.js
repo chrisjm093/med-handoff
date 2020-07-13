@@ -1,6 +1,6 @@
 require("dotenv").config();
 // Requiring necessary npm packages
-console.log(process.env.DEV_DB_PASS);
+
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -30,6 +30,7 @@ app.use(passport.session());
 app.use(express.static("public"));
 app.use(require("./controllers/authApiRoutes"));
 app.use(require("./controllers/userApiRoute"));
+app.use(require("./controllers/htmlRoutes"));
 
 // Set Handlebars as the default templating engine.
 const hbs = exphbs.create({ defaultLayout: "main" });
