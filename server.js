@@ -30,6 +30,7 @@ app.use(passport.session());
 app.use(express.static("public"));
 app.use(require("./controllers/authApiRoutes"));
 app.use(require("./controllers/userApiRoute"));
+app.use(require("./controllers/htmlRoutes.js"));
 
 // Set Handlebars as the default templating engine.
 const hbs = exphbs.create({ defaultLayout: "main" });
