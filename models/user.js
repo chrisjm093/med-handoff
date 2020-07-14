@@ -21,7 +21,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNul: false
     },
     shift: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: true
     },
     email: {
       type: DataTypes.STRING,
