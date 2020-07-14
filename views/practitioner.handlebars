@@ -1,1 +1,21 @@
-Testing
+<table class="table table-striped">
+    <thead>
+        <th scope="col">Unit</th>
+        <th scope="col">Room #</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Code Status</th>
+        <th scope="col">Diagnosis</th>
+    </thead>
+    <tbody>
+      {{#each Patient}}  
+        <th scope="row" class="unit"></th>
+        <td class="room-number"></td>
+        <td class="patient-name"></td>
+        <td class="age"></td>
+        <td class="code-status"></td>
+        <td class="diagnosis"></td>
+        <td><button type="button"  class="btn btn-secondary fas fa-plus-square" data="patient-ID"></button></td>
+      {{/each}}
+    </tbody>
+</table>

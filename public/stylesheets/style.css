@@ -2,3 +2,11 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.center-this {
+  text-align: center;
+}
+
+.underline-this {
+  text-decoration: underline;
+}
