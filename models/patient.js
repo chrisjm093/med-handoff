@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    lastName: {
+    lastName: {checkout master
       type: DataTypes.STRING,
       allowNull: false
     },
