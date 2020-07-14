@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    lastName: {checkout master
+    lastName: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -32,7 +32,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    therapies: {d
+    therapies: {
       type: DataTypes.STRING,
       allowNull: false
     },

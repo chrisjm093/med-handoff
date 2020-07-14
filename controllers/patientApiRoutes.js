@@ -14,13 +14,13 @@ router.post("/api/patients", (req, res) => {
     therapies: req.body.therapies,
     soap: req.body.soap
   })
-  .then(() => {
-    res.redirect(307, "/api/login");
-  .catch(err => {
-    res.json();
-  });
+
+    .then(() => {
+      res.redirect(307, "/api/login");
+    })
+    .catch(err => {
+      res.status(401).json(err);
+    });
 });
 
- 
-
-  module.exports = router;
+module.exports = router;
