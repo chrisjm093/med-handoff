@@ -46,8 +46,8 @@ $(document).ready(() => {
       email: email,
       password: password
     })
+      // eslint-disable-next-line no-unused-vars
       .then(result => {
-        console.log(result);
         window.location.reload();
         // If there's an error, handle it by throwing up a bootstrap alert
       })
