@@ -31,6 +31,7 @@ router.post("/api/patients", (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     unit: req.body.unit,
+    roomNumber: req.body.roomnumber,
     age: req.body.age,
     history: req.body.history,
     diagnosis: req.body.diagnosis,
@@ -46,8 +47,5 @@ router.post("/api/patients", (req, res) => {
       res.status(401).json(err);
     });
 });
-
-// router.put();
-// router.delete();
 
 module.exports = router;

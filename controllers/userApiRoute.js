@@ -30,7 +30,13 @@ router.get("/api/users/roles/:role", (req, res) => {
   });
 });
 
-//supervisor route to get all the users
+//supervisor route to get all the employees for the supervisor
+router.get("/api/users/supervisor", (req, res) => {
+  User.findAll({}).then(dbUsers => {
+    res.json(dbUsers);
+  });
+});
+
 router.get("/api/users/supervisor", (req, res) => {
   User.findAll({}).then(dbUsers => {
     res.json(dbUsers);
