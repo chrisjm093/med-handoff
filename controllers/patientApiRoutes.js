@@ -47,7 +47,7 @@ router.post("/api/patients", (req, res) => {
     });
 });
 
-router.put();
+// router.put();
 
 
 // router.delete();
