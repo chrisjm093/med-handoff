@@ -1,7 +1,5 @@
-const { response } = require("express");
-
 $(document).ready(() => {
-    //let current modal action
+  //let current modal action
   $.ajax({
     url: "/api/patients",
     method: "GET"
@@ -9,18 +7,18 @@ $(document).ready(() => {
     render(response);
   });
 
-//   $("#create").on("show.bs.modal", event => {
-//       $.ajax({
-//           url:"",
-//           method:""
-//       }).then(response=>{
+  //   $("#create").on("show.bs.modal", event => {
+  //       $.ajax({
+  //           url:"",
+  //           method:""
+  //       }).then(response=>{
 
-//       })
+  //       })
 
-//   });
+  //   });
 
   function render(patients) {
-      const patientTableEntry = $(`
+    const patientTableEntry = $(`
         <th scope="row" class="unit">${patients.unit}</th>
         <td class="room-number">${patients.roomNumber}</td>
         <td class="first-name">${patients.firstName}</td>
@@ -32,8 +30,7 @@ $(document).ready(() => {
             </button>
         </td>`);
 
-        patients.forEach(patients).append(patientTableEntry);
-
+    patients.forEach(patients).append(patientTableEntry);
 
     // patients.forEach(() => {
     //     render()
