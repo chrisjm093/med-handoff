@@ -8,14 +8,14 @@ $(document).ready(() => {
     render(response);
   });
 
-//   $("#create").on("show.bs.modal", event => {
-//     $.ajax({
-//       url: "/api/patients",
-//       method: "POST"
-//     }).then(response => {
-//        location.reload();
-//     });
-//   });
+  //   $("#create").on("show.bs.modal", event => {
+  //     $.ajax({
+  //       url: "/api/patients",
+  //       method: "POST"
+  //     }).then(response => {
+  //        location.reload();
+  //     });
+  //   });
 
   function render(patients) {
     patients.forEach(patient => {
