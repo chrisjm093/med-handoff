@@ -31,6 +31,7 @@ app.use(express.static("public"));
 app.use(require("./controllers/authApiRoutes"));
 app.use(require("./controllers/userApiRoute"));
 app.use(require("./controllers/htmlRoutes.js"));
+app.use(require("./controllers/patientApiRoutes.js"));
 
 // Set Handlebars as the default templating engine.
 const hbs = exphbs.create({ defaultLayout: "main" });
