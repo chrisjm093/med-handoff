@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  const patientTable = $("#patient-table");
   //let current modal action
   $.ajax({
     url: "/api/patients",
@@ -8,29 +9,29 @@ $(document).ready(() => {
   });
 
   //   $("#create").on("show.bs.modal", event => {
-  //       $.ajax({
-  //           url:"",
-  //           method:""
-  //       }).then(response=>{
-
-  //       })
-
+  //     $.ajax({
+  //       url: "/api/patients",
+  //       method: "POST"
+  //     }).then(response => {
+  //        location.reload();
+  //     });
   //   });
 
   function render(patients) {
-    const patientTableEntry = $(`
-        <th scope="row" class="unit">${patients.unit}</th>
-        <td class="room-number">${patients.roomNumber}</td>
-        <td class="first-name">${patients.firstName}</td>
-        <td class="last-name">${patients.lastName}</td>
-        <td class="age">${patients.age}</td>
-        <td class="code-status">${patients.codeStatus}</td>
-        <td class="diagnosis">${patients.diagnosis}</td>
-        <td><button type="button" class="btn btn-secondary fas fa-plus-square" data-toggle="modal" data="patient-ID" data-target="#staticBackdrop">
+    patients.forEach(patient => {
+      const patientTableEntry = $(`
+        <th scope="row" class="unit">${patient.unit}</th>
+        <td class="room-number">${patient.roomNumber}</td>
+        <td class="first-name">${patient.firstName}</td>
+        <td class="last-name">${patient.lastName}</td>
+        <td class="age">${patient.age}</td>
+        <td class="code-status">${patient.codeStatus}</td>
+        <td class="diagnosis">${patient.diagnosis}</td>
+        <td><button type="button" class="btn btn-secondary fas fa-plus-square" data-toggle="modal" data="${patient.id}" data-target="#staticBackdrop">
             </button>
         </td>`);
-
-    patients.forEach(patients).append(patientTableEntry);
+      patientTable.append(patientTableEntry);
+    });
 
     // patients.forEach(() => {
     //     render()
