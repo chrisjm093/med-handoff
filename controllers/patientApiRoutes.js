@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Patient } = require("../models");
+const db = require("../models");
 
 router.get("/api/patients", (req, res) => {
   Patient.findAll({})
@@ -47,7 +48,24 @@ router.post("/api/patients", (req, res) => {
     });
 });
 
-// router.put();
-// router.delete();
+router.put("/api/patients", (req, res) => {
+  db.Patient.update(req.body, {
+    where: {
+      id: req.body.id
+    }
+  }).then(dbPatient => {
+    res.json(dbPatient);
+  });
+});
+
+router.delete("/api/patients/:id", (req, res) => {
+  db.Patient.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(dbPatient => {
+    res.json(dbPatient);
+  });
+});
 
 module.exports = router;
