@@ -31,6 +31,7 @@ app.use(express.static("public"));
 app.use(require("./controllers/authApiRoutes"));
 app.use(require("./controllers/userApiRoute"));
 app.use(require("./controllers/htmlRoutes.js"));
+app.use(require("./controllers/patientsApi.js"));
 
 // Set Handlebars as the default templating engine.
 const hbs = exphbs.create({ defaultLayout: "main" });
@@ -39,7 +40,7 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
