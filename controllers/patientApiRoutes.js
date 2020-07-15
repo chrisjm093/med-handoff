@@ -1,22 +1,11 @@
 const router = require("express").Router();
 const { Patients } = require("../models");
 
-router.post("/api/patients", (req, res) => {
-  Patients.create({
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    unit: req.body.unit,
-    age: req.body.age,
-    history: req.body.history,
-    diagnosis: req.body.diagnosis,
-    codeStatus: req.body.codeStatus,
-    tests: req.body.tests,
-    therapies: req.body.therapies,
-    soap: req.body.soap
-  })
+router.get("/api/patients", (req, res) => {
+  Patients.findAll({})
 
-    .then(() => {
-      res.redirect(307, "/api/login");
+    .then(dbPatients => {
+      res.json(dbPatients);
     })
     .catch(err => {
       res.status(401).json(err);
