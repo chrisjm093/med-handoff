@@ -1,1 +1,154 @@
-Testing
+<table class="table table-striped">
+    <thead>
+        <th scope="col">Unit</th>
+        <th scope="col">Room #</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Code Status</th>
+        <th scope="col">Diagnosis</th>
+    </thead>
+    <tbody id="patient-table">
+    
+    {{!-- {{#each Patient}} 
+        <th scope="row" class="unit">ICU</th>
+        <td class="room-number">101</td>
+        <td class="patient-name">John Doe</td>
+        <td class="age">67</td>
+        <td class="code-status">FULL CODE</td>
+        <td class="diagnosis">ST Elevated MI</td>
+        <td><button type="button" class="btn btn-secondary fas fa-plus-square" data-toggle="modal" data="patient-ID" data-target="#staticBackdrop">
+            </button>
+        </td>
+            </tbody>
+     {{/each}} --}}
+</table>
+<!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+            
+            <div class="modal-body">
+                <div class="container">
+                     <div class="row">
+                        <div class="col-1">
+                            <div class="input-group">
+                                Unit
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="input-group">
+                                Room Number
+                            </div>
+                        </div>
+                        <div class="col- 2">
+                            <div class="input-group">
+                                First Name
+                            </div>
+                        </div>
+                        <div class="col- 2">
+                            <div class="input-group">
+                                Last Name
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="input-group">
+                                Age
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                Code Status
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="input-group">
+                                Diagnosis
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="input-group">
+                                <textarea class="form-control" id="unit" aria-label="With textarea" placeholder="Unit"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="input-group">
+                                <textarea class="form-control" id="room-number" aria-label="With textarea" placeholder="Rm#"></textarea>
+                            </div>
+                        </div>
+                        <div class="col- 2">
+                            <div class="input-group">
+                                <textarea class="form-control" id="patient-first-name" aria-label="With textarea" placeholder="Pt Name"></textarea>
+                            </div>
+                        </div>
+                        <div class="col- 2">
+                            <div class="input-group">
+                                <textarea class="form-control" id="patient-last-name" aria-label="With textarea" placeholder="Pt Name"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="input-group">
+                                <textarea class="form-control" id="age" aria-label="With textarea" placeholder="Age"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <textarea class="form-control" id="code-status" aria-label="With textarea" placeholder="Code Status"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="input-group">
+                                <textarea class="form-control" id="diagnosis" aria-label="With textarea" placeholder="Diagnosis"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="input-group">
+                                <textarea class="form-control" id="history" aria-label="With textarea" placeholder="History"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group">
+                                <textarea class="form-control" id="tests" aria-label="With textarea" placeholder="Tests"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group">
+                                <textarea class="form-control" id="therapies" aria-label="With textarea" placeholder="Therapies"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            SOAP
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                                <textarea class="form-control" id="soap" aria-label="With textarea" placeholder="SOAP"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                <div class="row">
+                    <div class="container">
+                        <button type="button" class="btn btn-success btn-lg" data-action="edit" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-danger btn-lg" data-action="delete" data-dismiss="discharge">Discharge</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      
+
+
+<button type="button" class="btn btn-success" data-action="create" id="add-patient">Add Patient</button>
+
+{{#section 'scripts'}}
+<script type="text/javascript" src="js/practitioner.js"></script>
+{{/section}}

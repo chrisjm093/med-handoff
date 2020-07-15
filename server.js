@@ -1,6 +1,6 @@
 require("dotenv").config();
 // Requiring necessary npm packages
-console.log(process.env.DEV_DB_PASS);
+
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -31,7 +31,7 @@ app.use(express.static("public"));
 app.use(require("./controllers/authApiRoutes"));
 app.use(require("./controllers/userApiRoute"));
 app.use(require("./controllers/htmlRoutes.js"));
-app.use(require("./controllers/patientsApi.js"));
+app.use(require("./controllers/patientApiRoutes.js"));
 
 // Set Handlebars as the default templating engine.
 const hbs = exphbs.create({ defaultLayout: "main" });
@@ -40,7 +40,7 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(() => {
+db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
