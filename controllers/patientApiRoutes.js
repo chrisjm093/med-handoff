@@ -48,8 +48,6 @@ router.post("/api/patients", (req, res) => {
 });
 
 // router.put();
-
-
 // router.delete();
 
 module.exports = router;
