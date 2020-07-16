@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { User } = require("../models");
-const { Patient } = require("../models");
 
 //create a  new user in database
 router.post("/api/users", (req, res) => {
@@ -31,16 +30,13 @@ router.get("/api/users/roles/:role", (req, res) => {
   });
 });
 
-//supervisor route to get all the employees for the supervisor
-router.get("/api/users/supervisor", (req, res) => {
-  User.findAll({}).then(dbUsers => {
-    res.json(dbUsers);
-  });
-});
-
-router.get("/api/supervisor", (req, res) => {
-  Patient.findAll({}).then(dbPatient => {
-    res.json(dbPatient);
+router.put("/api/users/:id", (req, res) => {
+  User.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  }).then(dbUser => {
+    res.json(dbUser);
   });
 });
 
