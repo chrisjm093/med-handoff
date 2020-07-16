@@ -32,9 +32,5 @@ $(document).ready(() => {
         </td>`);
       patientTable.append(patientTableEntry);
     });
-
-    // patients.forEach(() => {
-    //     render()
-    // });
   }
 });
