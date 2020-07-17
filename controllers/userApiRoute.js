@@ -30,10 +30,13 @@ router.get("/api/users/roles/:role", (req, res) => {
   });
 });
 
-//supervisor route to get all the users
-router.get("/api/users/supervisor", (req, res) => {
-  User.findAll({}).then(dbUsers => {
-    res.json(dbUsers);
+router.put("/api/users/:id", (req, res) => {
+  User.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  }).then(dbUser => {
+    res.json(dbUser);
   });
 });
 

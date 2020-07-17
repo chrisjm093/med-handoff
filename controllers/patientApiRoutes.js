@@ -32,6 +32,7 @@ router.post("/api/patients", (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     unit: req.body.unit,
+    roomNumber: req.body.roomnumber,
     age: req.body.age,
     history: req.body.history,
     diagnosis: req.body.diagnosis,
