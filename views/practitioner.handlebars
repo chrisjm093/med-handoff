@@ -60,7 +60,7 @@
                 <div class="row">
                     <div class="col-1">
                         <div class="input-group">
-                            <select class="form-control" id="Shift">
+                            <select class="form-control" id="patientUnit">
                                 <option>ICU</option>
                                 <option>ER</option>
                                 <option>Flr</option>
@@ -144,8 +144,8 @@
         </div>
             <div class="row">
                 <div class="container">
-                    <button type="button" class="btn btn-success btn-lg" data-action="edit" data-dismiss="modal">Save</button>
-                    <button type="button" class="btn btn-danger btn-lg" data-action="delete" data-dismiss="modal">Discharge</button>
+                    <button type="button" class="btn btn-success btn-lg" data-action="edit" id="add-save" data-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-danger btn-lg" data-action="delete" id="dischargePatient" data-dismiss="modal">Discharge</button>
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
 
 
 
-<button type="button" class="btn btn-success" data-action="create" id="add-patient">Add Patient</button>
+<button type="button" class="btn btn-success" data-action="create" id="add-patient" data-toggle="modal" data-target="#patient-modal">Add Patient</button>
 
 {{#section 'scripts'}}
 <script type="text/javascript" src="js/practitioner.js"></script>

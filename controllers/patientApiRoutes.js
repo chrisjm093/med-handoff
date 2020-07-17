@@ -32,7 +32,7 @@ router.post("/api/patients", (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     unit: req.body.unit,
-    roomNumber: req.body.roomnumber,
+    roomNumber: req.body.roomNumber,
     age: req.body.age,
     history: req.body.history,
     diagnosis: req.body.diagnosis,
@@ -49,10 +49,10 @@ router.post("/api/patients", (req, res) => {
     });
 });
 
-router.put("/api/patients", (req, res) => {
+router.put("/api/patients/:id", (req, res) => {
   db.Patient.update(req.body, {
     where: {
-      id: req.body.id
+      id: req.params.id
     }
   }).then(dbPatient => {
     res.json(dbPatient);
