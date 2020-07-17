@@ -21,28 +21,23 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     history: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
     diagnosis: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
     codeStatus: {
       type: DataTypes.STRING,
       allowNull: false
     },
     tests: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
     therapies: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
     soap: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     }
   });
 

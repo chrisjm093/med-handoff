@@ -30,20 +30,53 @@ $(document).ready(() => {
   $("#patient-modal").on("show.bs.modal", event => {
     const modalButton = $(event.relatedTarget);
     patientSelected = modalButton.data("patientid");
-    console.log(modalButton);
-    console.log(patientSelected);
-
-    $.ajax({
-      url: "/api/patients/" + patientSelected,
-      method: "GET"
-    }).then(() => {
-      //console.log(response);
-    });
+    // console.log(modalButton);
+    // console.log(patientSelected);
+    if (patientSelected) {
+      $.ajax({
+        url: "/api/patients/" + patientSelected,
+        method: "GET"
+      }).then(() => {
+        //console.log(response);
+      });
+    }
   });
-  // AJAX Post Route- Toggle and Data Attributes
-  // $("#add-patient").on("click", () => {
-  //   console.log("Clicked");
-  // });
+
+  $("#add-save").on("click", () => {
+    const patient = {
+      unit: $("#patientUnit").val(),
+      roomNumber: $("#room-number").val(),
+      firstName: $("#patient-first-name").val(),
+      lastName: $("#patient-last-name").val(),
+      age: $("#age").val(),
+      codeStatus: $("#code-status").val(),
+      diagnosis: $("#diagnosis").val(),
+      history: $("#history").val(),
+      tests: $("#tests").val(),
+      therapies: $("#therapies").val(),
+      soap: $("#soap").val()
+    };
+
+    console.log(patient);
+
+    if (patientSelected) {
+      $.ajax({
+        url: "/api/patients/" + patientSelected,
+        method: "PUT",
+        data: patient
+      }).then(() => {
+        window.location.reload();
+      });
+    } else {
+      $.ajax({
+        url: "/api/patients/",
+        method: "POST",
+        data: patient
+      }).then(() => {
+        window.location.reload();
+      });
+    }
+  });
 
   $("#dischargePatient").on("click", () => {
     console.log(patientSelected);
