@@ -1,6 +1,7 @@
 $(document).ready(() => {
   let patientSelected;
   const patientTable = $("#patient-table");
+
   //let current modal action
   $.ajax({
     url: "/api/patients",
