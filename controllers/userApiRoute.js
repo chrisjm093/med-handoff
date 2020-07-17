@@ -19,16 +19,22 @@ router.post("/api/users", (req, res) => {
     });
 });
 
-//get the different users by specific roles
-router.get("/api/users/roles/:role", (req, res) => {
-  User.findAll({
-    where: {
-      role: req.params.role
-    }
-  }).then(dbUsers => {
+router.get("/api/users/supervisor", (req, res) => {
+  User.findAll({}).then(dbUsers => {
     res.json(dbUsers);
   });
 });
+
+// get the different users by specific roles
+// router.get("/api/users/roles/:role", (req, res) => {
+//   User.findAll({
+//     where: {
+//       role: req.params.role
+//     }
+//   }).then(dbUsers => {
+//     res.json(dbUsers);
+//   });
+// });
 
 router.put("/api/users/:id", (req, res) => {
   User.update(req.body, {
