@@ -10,3 +10,25 @@ form.login {
 .underline-this {
   text-decoration: underline;
 }
+
+.disclaimer{
+  margin: auto;
+  padding: 10px;
+}
+
+.brand{
+  font-family: 'Faster One', cursive;
+}
+
+.supervisor-heading{
+  margin: .5em;
+}
+
+.modal-xl{
+  max-width: 1300px;
+}
+
+.button-row{
+  margin-bottom: 5px;
+  margin-left: 2em;
+}
