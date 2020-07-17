@@ -5,6 +5,7 @@ $(document).ready(() => {
     url: "/api/patients",
     method: "GET"
   }).then(response => {
+    console.log(response);
     render(response);
   });
 
