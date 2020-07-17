@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  let patientSelected;
   const patientTable = $("#patient-table");
   //let current modal action
   $.ajax({
@@ -28,12 +29,30 @@ $(document).ready(() => {
   }
   $("#patient-modal").on("show.bs.modal", event => {
     const modalButton = $(event.relatedTarget);
-    const patientSelected = modalButton.data("patientId");
+    patientSelected = modalButton.data("patientid");
+    console.log(modalButton);
+    console.log(patientSelected);
+
     $.ajax({
       url: "/api/patients/" + patientSelected,
       method: "GET"
-    }).then(response => {
-      console.log(response);
+    }).then(() => {
+      //console.log(response);
+    });
+  });
+  // AJAX Post Route- Toggle and Data Attributes
+  // $("#add-patient").on("click", () => {
+  //   console.log("Clicked");
+  // });
+
+  $("#dischargePatient").on("click", () => {
+    console.log(patientSelected);
+    $.ajax({
+      url: "/api/patients/" + patientSelected,
+      method: "DELETE"
+    }).then(() => {
+      //call render function separately
+      window.location.reload();
     });
   });
 });
