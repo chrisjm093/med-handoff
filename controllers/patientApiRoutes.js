@@ -3,7 +3,11 @@ const { Patient } = require("../models");
 const db = require("../models");
 
 router.get("/api/patients", (req, res) => {
-  Patient.findAll({})
+  Patient.findAll({
+    where: {
+      unit: req.user.unit
+    }
+  })
 
     .then(dbPatients => {
       res.json(dbPatients);

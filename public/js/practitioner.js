@@ -1,12 +1,12 @@
 $(document).ready(() => {
   let patientSelected;
   const patientTable = $("#patient-table");
+
   //let current modal action
   $.ajax({
     url: "/api/patients",
     method: "GET"
   }).then(response => {
-    console.log(response);
     render(response);
   });
 
