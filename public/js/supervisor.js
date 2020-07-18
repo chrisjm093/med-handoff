@@ -22,12 +22,8 @@ $(document).ready(() => {
             }>  </option>  
             <option ${user.unit === "ICU" ? "selected" : ""}>ICU</option>
               <option ${user.unit === "ER" ? "selected" : ""}>ER</option>
-              <option ${
-                user.unit === "Floors" ? "selected" : ""
-              }>Floors</option>
-              <option ${
-                user.unit === "Pediatric" ? "selected" : ""
-              }>Pediatric</option>
+              <option ${user.unit === "Flr" ? "selected" : ""}>Flr</option>
+              <option ${user.unit === "Ped" ? "selected" : ""}>Ped</option>
             </select>
           </td>
           <td>
