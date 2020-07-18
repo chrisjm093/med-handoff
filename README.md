@@ -1,5 +1,7 @@
-# Med-Handoff
+# Title
+Med-Handoff
 
+## Description
 Handoff is the point of patient care where information is most likely to be lost. To mitigate this gap in communication, Med-Handoff standardizes the process so that patient care can be optimized and gaps in communication closed.
 
 GIVEN I AM
@@ -12,6 +14,32 @@ I want to be able to add new patients as they are admitted, and remove patients 
 I want to be able to update relevant patient information as it changes.
 I want to be able to reassign work lists easily.
 I want the staff to be able to update patient information.
+
+# Table Of Contents
+* [Title](Readme.md#title)
+* [Description](Readme.md#description)
+* [Installation](Readme.md#installation)
+* [Usage](Readme.md#contributing)
+* [Badges](Readme.md#license)
+* [Tests](Readme.md#tests)
+
+
+## Installation
+npm i
+
+## License
+![GPLv3 license](https://img.shields.io/badge/license-GPLv3-blue.svg)
+
+## Contribution [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)](https://github.com/https://github.com/chrisjm093/med-handoff/edit/master/README.md/)
+Chris,Eda,Niv,Trenton
+
+## Tests
+npm server.js
+
+## Heroku Link
+
+https://uwproject2bootcamp.herokuapp.com/
+
 
 
 
