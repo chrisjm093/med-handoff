@@ -1,9 +1,7 @@
-# Title
-Med-Handoff
-
-## Description
+# Med-Handoff
 Handoff is the point of patient care where information is most likely to be lost. To mitigate this gap in communication, Med-Handoff standardizes the process so that patient care can be optimized and gaps in communication closed.
 
+## Description
 GIVEN I AM
 a Shift supervisor, or a practitioner
 WHEN a new cohort comes on shift and the previous cohort needs to handoff to the oncoming staff
