@@ -1,14 +1,13 @@
 $(document).ready(() => {
   let patientSelected;
   const patientTable = $("#patient-table");
-
+  //let current modal action
   $.ajax({
     url: "/api/patients",
     method: "GET"
   }).then(response => {
     render(response);
   });
-
   function render(patients) {
     patients.forEach(patient => {
       const patientTableEntry = $(`
@@ -29,8 +28,9 @@ $(document).ready(() => {
   }
   $("#patient-modal").on("show.bs.modal", event => {
     const modalButton = $(event.relatedTarget);
-    const patientSelected = modalButton.data("patientid");
-
+    patientSelected = modalButton.data("patientid");
+    // console.log(modalButton);
+    // console.log(patientSelected);
     if (patientSelected) {
       $.ajax({
         url: "/api/patients/" + patientSelected,
@@ -47,10 +47,10 @@ $(document).ready(() => {
           $("#tests").val(response.tests),
           $("#therapies").val(response.therapies),
           $("#soap").val(response.soap);
+        //console.log(response);
       });
     }
   });
-
   $("#add-save").on("click", () => {
     const patient = {
       unit: $("#patientUnit").val(),
@@ -65,7 +65,7 @@ $(document).ready(() => {
       therapies: $("#therapies").val(),
       soap: $("#soap").val()
     };
-
+    console.log(patient);
     if (patientSelected) {
       $.ajax({
         url: "/api/patients/" + patientSelected,
@@ -84,12 +84,13 @@ $(document).ready(() => {
       });
     }
   });
-
   $("#dischargePatient").on("click", () => {
+    console.log(patientSelected);
     $.ajax({
       url: "/api/patients/" + patientSelected,
       method: "DELETE"
     }).then(() => {
+      //call render function separately
       window.location.reload();
     });
   });
