@@ -34,7 +34,7 @@ npm i
 Chris,Eda,Niv,Trenton
 
 ## Tests
-npm server.js
+node server.js
 
 ## Heroku Link
 
