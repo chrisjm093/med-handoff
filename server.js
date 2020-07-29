@@ -1,6 +1,6 @@
 require("dotenv").config();
 // Requiring necessary npm packages
-
+var compression = require('compression');
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -16,6 +16,7 @@ const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
+app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
